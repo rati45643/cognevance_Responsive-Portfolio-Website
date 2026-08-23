@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ratish Kannur - Official Software Engineer Resume</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-dark: #4338ca;
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --border: #e5e7eb;
+      --bg-card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.5;
+      margin: 0;
+      padding: 2rem;
+      background: #f3f4f6;
+    }
+    .resume-card {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border);
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+    .name {
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0 0 0.25rem 0;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .title-sub {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+    }
+    .contact-line {
+      font-size: 0.925rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .contact-line a {
+      color: var(--primary);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--primary);
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 0.35rem;
+      margin-top: 1.75rem;
+      margin-bottom: 0.85rem;
+      letter-spacing: 0.04em;
+    }
+    ul {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+    .date {
+      color: var(--accent-cyan);
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    .project-item {
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      background: #f9fafb;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .project-links {
+      margin-top: 0.35rem;
+      font-size: 0.825rem;
+    }
+    .project-links a {
+      color: var(--primary);
+      margin-right: 0.85rem;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    .btn-bar {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .btn {
+      padding: 0.65rem 1.35rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: var(--primary-dark);
+    }
+    .btn-secondary {
+      background: #374151;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .resume-card { box-shadow: none; border: none; padding: 0; width: 100%; max-width: 100%; }
+      .btn-bar { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="btn-bar">
+    <button class="btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <a href="/Ratish_Kannur_Resume.md" download class="btn btn-secondary">📥 Download Raw Markdown</a>
+  </div>
+
+  <div class="resume-card">
+    <div class="header">
+      <h1 class="name">RATISH KANNUR</h1>
+      <div class="title-sub">Full Stack Developer & Software Engineer</div>
+      <div class="contact-line">
+        <a href="mailto:ratishkannur@gmail.com">ratishkannur@gmail.com</a> |
+        <span>+91 9019542275</span> |
+        <a href="https://github.com/ratishkannur" target="_blank">GitHub ↗</a> |
+        <a href="https://linkedin.com/in/ratishkannur" target="_blank">LinkedIn ↗</a> |
+        <span>Bengaluru, India</span>
+      </div>
+    </div>
+
+    <div class="section-title">TECHNICAL SKILLS TOOLKIT</div>
+    <ul style="list-style: none; padding-left: 0;">
+      <li>• <strong>Testing:</strong> Manual Testing, Functional Testing, Regression Testing, Smoke Testing, STLC, SDLC</li>
+      <li>• <strong>Automation:</strong> Playwright</li>
+      <li>• <strong>Web & Fullstack:</strong> HTML5, CSS3, JavaScript (ES6+), TypeScript, React.js, Node.js, Express.js, REST APIs, Vite</li>
+      <li>• <strong>API & Testing:</strong> Postman, REST API Testing</li>
+      <li>• <strong>Mobile & Gen AI:</strong> Kotlin, Android Studio, Jetpack Compose, Generative AI Integration</li>
+      <li>• <strong>Databases & Cloud:</strong> MongoDB, SQLite, Firebase, SQL</li>
+      <li>• <strong>Version Control:</strong> GitHub, Git, GitHub Actions</li>
+      <li>• <strong>Programming Languages:</strong> C++, Java, C, Python</li>
+      <li>• <strong>Machine Learning & Analytics:</strong> Pandas, Flask, Spacy, Scikit-learn, Tableau, Power BI</li>
+    </ul>
+
+    <div class="section-title">INTERNSHIP EXPERIENCE</div>
+    <div class="item-header">
+      <span>Android App Development using Gen AI – Mind Matrix</span>
+      <span class="date">Feb 2026 – May 2026</span>
+    </div>
+    <p style="margin-top: 0.25rem; color: #374151;">Worked on Android app development leveraging Generative AI to build intelligent, user-centric mobile applications. Developed and integrated AI-driven features in Kotlin, Jetpack Compose, and Android Studio for personalized recommendations and dynamic content generation.</p>
+
+    <div class="section-title">FEATURED PROJECTS & CASE STUDIES</div>
+    
+    <div class="project-item">
+      <div class="item-header">
+        <span>1. Responsive Portfolio Website</span>
+        <span style="font-size: 0.85rem; color: var(--primary);">Fullstack / MERN</span>
+      </div>
+      <div>Designed and developed a responsive personal portfolio application with React frontend and Express/SQLite backend. Integrated persistent database storage for contact inquiries and dynamic project filters.</div>
+      <div class="project-links">
+        <a href="https://github.com/ratishkannur/responsive-portfolio" target="_blank">GitHub Code ↗</a>
+        <a href="http://localhost:5000" target="_blank">Live Portfolio Demo ↗</a>
+      </div>
+    </div>
+
+    <div class="project-item">
+      <div class="item-header">
+        <span>2. AI Customer Feedback Platform (Project Loop)</span>
+        <span style="font-size: 0.85rem; color: var(--accent-emerald);">AI Dashboard</span>
+      </div>
+      <div>Real-time executive customer feedback analytics dashboard for MSKR. Aggregates multi-channel user feedback, processes sentiment classification (Positive/Neutral/Negative), and extracts top support themes.</div>
+      <div class="project-links">
+        <a href="https://ai-customer-feedback-inky.vercel.app/dashboard" target="_blank">Live Vercel Dashboard Demo ↗</a>
+      </div>
+    </div>
+
+    <div class="project-item">
+      <div class="item-header">
+        <span>3. AI Mock Interview Platform (Interview Pro)</span>
+        <span style="font-size: 0.85rem; color: var(--primary);">AI Platform</span>
+      </div>
+      <div>AI-driven practice platform designed for software engineers. Offers interactive practice zones including Group Discussion simulation, JAM (Just a Minute) spontaneous speaking, and AI Mock Interviews.</div>
+      <div class="project-links">
+        <a href="https://github.com/ratishkannur/interview-pro-ai" target="_blank">GitHub Code ↗</a>
+      </div>
+    </div>
+
+    <div class="project-item">
+      <div class="item-header">
+        <span>4. Resume Ranker ATS Tracking System</span>
+        <span style="font-size: 0.85rem; color: #4b5563;">Machine Learning</span>
+      </div>
+      <div>An AI-powered ATS tracking system that parses candidate resumes, computes cosine similarity against job descriptions using SpaCy NLP, and ranks candidates by relevance.</div>
+      <div class="project-links">
+        <a href="https://github.com/ratishkannur/resume-ranker-ats" target="_blank">GitHub Code ↗</a>
+      </div>
+    </div>
+
+    <div class="section-title">EDUCATION</div>
+    <div class="item-header">
+      <span>APS College of Engineering, Bengaluru</span>
+      <span class="date">Dec 2022 – May 2026</span>
+    </div>
+    <div>B.E. in Information Science and Engineering | <strong style="color: var(--accent-emerald);">CGPA: 8.6 / 10.0</strong></div>
+
+    <div class="section-title">PROFESSIONAL CERTIFICATES</div>
+    <ul>
+      <li><strong>MERN FullStack Certification:</strong> Certified in MERN stack development (MongoDB, Express, React, Node). <a href="https://github.com/ratishkannur" target="_blank">Proof Link ↗</a></li>
+      <li><strong>Android App Development Using Gen AI:</strong> Certification covering Kotlin & Gen AI mobile development. <a href="https://github.com/ratishkannur" target="_blank">Proof Link ↗</a></li>
+      <li><strong>Cyber Suraksha:</strong> Certified by TCS in essential cybersecurity practices and digital safety. <a href="https://github.com/ratishkannur" target="_blank">Proof Link ↗</a></li>
+      <li><strong>CSRBOX Data Analytics:</strong> Hands-on data processing and dashboard generation certification. <a href="https://github.com/ratishkannur" target="_blank">Proof Link ↗</a></li>
+    </ul>
+  </div>
+
+</body>
+</html>
