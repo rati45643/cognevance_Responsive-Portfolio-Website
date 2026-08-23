@@ -1,1 +1,0 @@
-# cognevance_Responsive-Portfolio-Website
