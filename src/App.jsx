@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import MessagesModal from './components/MessagesModal';
 import ResumeModal from './components/ResumeModal';
-import AdminCMSModal from './components/AdminCMSModal';
 import AIChatbot from './components/AIChatbot';
 import {
   personalInfo as defaultPersonalInfo,
@@ -24,9 +23,8 @@ function App() {
   const [messages, setMessages] = useState([]);
   const [messagesModalOpen, setMessagesModalOpen] = useState(false);
   const [resumeModalOpen, setResumeModalOpen] = useState(false);
-  const [cmsModalOpen, setCmsModalOpen] = useState(false);
 
-  // Full Portfolio Content CMS State
+  // Portfolio Content State
   const [portfolioContent, setPortfolioContent] = useState({
     personalInfo: defaultPersonalInfo,
     skillsData: defaultSkillsData,
@@ -42,7 +40,7 @@ function App() {
     document.documentElement.setAttribute('data-theme', newTheme);
   };
 
-  // Fetch live CMS content from Express SQLite API or local storage fallback
+  // Fetch live portfolio content from Express API or local storage fallback
   const fetchPortfolioContent = async () => {
     try {
       const stored = localStorage.getItem('ratish_portfolio_content');
@@ -63,7 +61,7 @@ function App() {
         }
       }
     } catch (err) {
-      console.log('Unable to fetch custom CMS portfolio content from server, using local state:', err);
+      console.log('Unable to fetch custom portfolio content from server, using default state:', err);
     }
   };
 
@@ -86,59 +84,6 @@ function App() {
     fetchMessages();
   }, []);
 
-  // Save content live to React state, localStorage, and backend SQLite DB
-  const handleSaveContent = async (newContent, adminPassword) => {
-    // Instantly apply state and save to localStorage
-    setPortfolioContent(newContent);
-    try {
-      localStorage.setItem('ratish_portfolio_content', JSON.stringify(newContent));
-    } catch (e) {}
-
-    try {
-      const res = await fetch('/api/content', {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Admin-Password': adminPassword,
-        },
-        body: JSON.stringify(newContent),
-      });
-
-      const data = await res.json();
-      if (res.ok && data.success) {
-        setPortfolioContent(data.content);
-        try {
-          localStorage.setItem('ratish_portfolio_content', JSON.stringify(data.content));
-        } catch (e) {}
-        return { success: true };
-      }
-    } catch (err) {
-      console.log('Saved live to local storage, backend sync offline:', err);
-    }
-    return { success: true };
-  };
-
-  // Reset content to default
-  const handleResetContent = async (adminPassword) => {
-    try {
-      const res = await fetch('/api/content/reset', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Admin-Password': adminPassword,
-        },
-      });
-
-      const data = await res.json();
-      if (res.ok && data.success) {
-        setPortfolioContent(data.content);
-        return { success: true };
-      }
-    } catch (err) {
-      console.error('Reset failed:', err);
-    }
-  };
-
   return (
     <div className="app-main">
       {/* Background Glowing Canvas Orbs */}
@@ -157,7 +102,6 @@ function App() {
           setMessagesModalOpen(true);
         }}
         onOpenResume={() => setResumeModalOpen(true)}
-        onOpenCMS={() => setCmsModalOpen(true)}
         messageCount={messages.length}
         personalInfo={portfolioContent.personalInfo}
       />
@@ -193,14 +137,6 @@ function App() {
         isOpen={resumeModalOpen}
         onClose={() => setResumeModalOpen(false)}
         portfolioContent={portfolioContent}
-      />
-
-      <AdminCMSModal
-        isOpen={cmsModalOpen}
-        onClose={() => setCmsModalOpen(false)}
-        portfolioContent={portfolioContent}
-        onSaveContent={handleSaveContent}
-        onResetContent={handleResetContent}
       />
 
       {/* Personal AI Portfolio Assistant Widget */}

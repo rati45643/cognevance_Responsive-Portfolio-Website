@@ -53,21 +53,71 @@ export const skillsData = [
 
 export const projectsData = [
   {
-    id: "portfolio-website",
-    title: "Responsive Portfolio Website",
+    id: "mock-interview-process",
+    title: "Mock Interview Process",
     category: "Fullstack",
-    badge: "Featured / New",
-    description: "Designed and developed a responsive personal portfolio application with React frontend and Express backend. Integrated SQLite database for storing contact submissions via REST API, dark/light theme switching, glassmorphic UI, and dynamic project filtering.",
-    technologies: ["React.js", "Node.js", "Express.js", "SQLite", "Vite", "REST API", "CSS Modules"],
-    image: "/images/portfolio_website_preview.png",
-    githubLink: "https://github.com/ratishkannur/responsive-portfolio",
-    liveLink: "http://localhost:5000",
-    credentialLink: "http://localhost:5000",
+    badge: "Interview Platform",
+    description: "Full-stack mock interview platform designed to help candidates practice technical and behavioral interviews through interactive interview sessions, question management, answer evaluation, and performance tracking.",
+    technologies: ["React.js", "Node.js", "Express.js", "Firebase", "Firestore", "Authentication", "Dashboard UI"],
+    image: "/images/mock_interview_process.avif",
+    githubLink: "https://github.com/rati45643/Mock-Interview-Process",
+    liveLink: "https://myintervie.netlify.app/",
+    credentialLink: "https://myintervie.netlify.app/",
     highlights: [
-      "Built responsive UI with customizable dark glassmorphic aesthetics",
-      "Created Express.js REST API with input validation",
-      "Stored contact form submissions persistently in SQLite database (portfolio.db)",
-      "Implemented admin message drawer to inspect stored inquiries"
+      "Developed an interactive mock interview workflow for technical and behavioral interview preparation",
+      "Implemented question management, interview sessions, and candidate response tracking",
+      "Built a responsive dashboard to review interview performance and identify areas for improvement"
+    ]
+  },
+  {
+    id: "job-auto-apply",
+    title: "Job Auto Apply Automation",
+    category: "Automation Testing",
+    badge: "Test Automation",
+    description: "Python-based job application automation testing framework using Playwright to automate job search, application workflows, form filling, and validation of job application processes.",
+    technologies: ["Python", "Playwright", "Pytest", "Automation Testing", "Web Automation"],
+    image: "/images/job_auto_apply.jpg",
+    githubLink: "https://github.com/rati45643/Job-auto-apply",
+    liveLink: "https://github.com/rati45643/Job-auto-apply",
+    credentialLink: "https://github.com/rati45643/Job-auto-apply",
+    highlights: [
+      "Automated job search and application workflows using Python and Playwright",
+      "Implemented automated form filling, element validation, and browser interaction testing",
+      "Built reusable automation test cases with Pytest for reliable end-to-end job application testing"
+    ]
+  },
+  {
+    id: "enterprise-ecommerce-analytics",
+    title: "Enterprise E-Commerce & Analytics Platform",
+    category: "Fullstack",
+    badge: "E-Commerce Analytics",
+    description: "Full-stack enterprise e-commerce platform with product, customer, order, inventory, and analytics management. Includes real-time inventory updates, image uploads, customer management, and an advanced admin dashboard for monitoring business performance.",
+    technologies: ["React.js", "Node.js", "Express.js", "Firebase", "Firestore", "Firebase Storage", "Authentication", "Analytics Dashboard"],
+    image: "/images/enterprise_ecommerce_analytics.avif",
+    githubLink: "https://github.com/rati45643/cognevance_Enterprise-E-Commerce-Analytics-Platform",
+    liveLink: "https://enterprise-e-commerce-analytics-platform.onrender.com/",
+    credentialLink: "https://enterprise-e-commerce-analytics-platform.onrender.com/",
+    highlights: [
+      "Built product, customer, order, and inventory management with real-time stock updates",
+      "Implemented Firebase Storage for product image uploads and Firestore for application data",
+      "Developed an advanced admin analytics dashboard with sales, orders, customers, and inventory insights"
+    ]
+  },
+  {
+    id: "online-course-management",
+    title: "Online Course Management System",
+    category: "Fullstack",
+    badge: "Learning Platform",
+    description: "Full-stack online course management platform that enables administrators and instructors to manage courses, lessons, students, enrollments, and learning progress through a centralized web application.",
+    technologies: ["React.js", "Node.js", "Express.js", "Firebase", "Firestore", "Authentication", "Dashboard UI"],
+    image: "/images/online_course_management.avif",
+    githubLink: "https://github.com/rati45643/cognevance_Online-Course-Management-System",
+    liveLink: "https://online-course-management-system-frontend.onrender.com/",
+    credentialLink: "https://online-course-management-system-frontend.onrender.com/",
+    highlights: [
+      "Developed course and lesson management functionality with a responsive user interface",
+      "Implemented student enrollment and learning progress tracking",
+      "Built secure authentication and role-based access for managing course content"
     ]
   },
   {
@@ -90,10 +140,10 @@ export const projectsData = [
   {
     id: "mskr-resort",
     title: "MSKR Resort Booking Platform",
-    category: "Fullstack",
+    category: "Mobile",
     badge: "Resort Web App",
     description: "Luxury resort booking and hospitality digital platform. Allows guests to book luxury rooms, order delicious food/dining, and access resort amenities with seamless mobile experience.",
-    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "CSS Modules"],
+    technologies: ["Android Studio", "Jetpack Compose", "Kotlin", "Android SDK"],
     image: "/images/mskr_resort.jpg",
     githubLink: "https://github.com/ratishkannur",
     liveLink: "https://github.com/ratishkannur",

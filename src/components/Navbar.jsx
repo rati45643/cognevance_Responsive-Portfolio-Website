@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Sun, Moon, Database, FileText, Menu, X, Edit3, Shield } from 'lucide-react';
+import { Sun, Moon, Database, FileText, Menu, X } from 'lucide-react';
 import { personalInfo as defaultInfo } from '../data/portfolioData';
 
-const Navbar = ({ theme, toggleTheme, onOpenMessages, onOpenResume, onOpenCMS, messageCount, personalInfo }) => {
+const Navbar = ({ theme, toggleTheme, onOpenMessages, onOpenResume, messageCount, personalInfo }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -23,122 +23,141 @@ const Navbar = ({ theme, toggleTheme, onOpenMessages, onOpenResume, onOpenCMS, m
   };
 
   return (
-    <header className="navbar glass-card">
-      <a href="#home" className="nav-brand" onClick={() => handleNavClick('#home')}>
-        <div className="nav-logo-icon">RK</div>
-        <span>{info.name}</span>
-      </a>
+    <>
+      <header className="navbar glass-card">
+        <a href="#home" className="nav-brand" onClick={() => handleNavClick('#home')}>
+          <div className="nav-logo-icon">RK</div>
+          <span>{info.name}</span>
+        </a>
 
-      {/* Desktop Nav */}
-      <ul className="nav-links">
-        {navLinks.map((link) => (
-          <li key={link.name}>
-            <a
-              href={link.href}
-              className={`nav-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}
-              onClick={() => handleNavClick(link.href)}
-            >
-              {link.name}
-            </a>
-          </li>
-        ))}
-      </ul>
+        {/* Desktop Nav Links */}
+        <ul className="nav-links">
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <a
+                href={link.href}
+                className={`nav-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}
+                onClick={() => handleNavClick(link.href)}
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
 
-      <div className="nav-actions">
-        {/* Theme Toggle */}
-        <button
-          className="theme-toggle-btn"
-          onClick={toggleTheme}
-          title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
-        >
-          {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-        </button>
+        {/* Header Actions */}
+        <div className="nav-actions">
+          {/* Theme Toggle */}
+          <button
+            className="theme-toggle-btn"
+            onClick={toggleTheme}
+            title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
 
-        {/* Edit Page / Admin CMS Button */}
-        <button
-          className="btn btn-secondary"
-          onClick={onOpenCMS}
-          style={{ padding: '0.45rem 0.85rem', fontSize: '0.85rem', color: 'var(--accent-pink)', borderColor: 'rgba(236, 72, 153, 0.4)' }}
-          title="Open Full Page CMS Editor (Password Protected)"
-        >
-          <Edit3 size={15} />
-          <span>Edit Page</span>
-        </button>
+          {/* Database Inquiries Button (Desktop) */}
+          <button
+            className="btn btn-secondary nav-action-btn desktop-only-action"
+            onClick={onOpenMessages}
+            style={{ padding: '0.45rem 0.85rem', fontSize: '0.85rem' }}
+            title="Inspect stored database messages"
+          >
+            <Database size={15} />
+            <span>DB Messages</span>
+            {messageCount > 0 && (
+              <span className="msg-badge">
+                {messageCount}
+              </span>
+            )}
+          </button>
 
-        {/* Database Inquiries Modal Button */}
-        <button
-          className="btn btn-secondary"
-          onClick={onOpenMessages}
-          style={{ padding: '0.45rem 0.85rem', fontSize: '0.85rem' }}
-          title="Inspect stored database messages"
-        >
-          <Database size={15} />
-          <span>DB Messages</span>
-          {messageCount > 0 && (
-            <span style={{
-              background: 'var(--accent-primary)',
-              color: '#fff',
-              borderRadius: '99px',
-              padding: '0.1rem 0.45rem',
-              fontSize: '0.75rem',
-              fontWeight: '700'
-            }}>
-              {messageCount}
-            </span>
-          )}
-        </button>
+          {/* Resume Button (Desktop) */}
+          <button
+            className="btn btn-primary nav-action-btn desktop-only-action"
+            onClick={onOpenResume}
+            style={{ padding: '0.45rem 1.1rem', fontSize: '0.85rem' }}
+          >
+            <FileText size={15} />
+            <span>Resume</span>
+          </button>
 
-        {/* Resume Button */}
-        <button
-          className="btn btn-primary"
-          onClick={onOpenResume}
-          style={{ padding: '0.45rem 1.1rem', fontSize: '0.85rem' }}
-        >
-          <FileText size={15} />
-          <span>Resume</span>
-        </button>
+          {/* Mobile Menu Hamburger Button */}
+          <button
+            className="mobile-menu-btn"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation menu"
+          >
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
+      </header>
 
-        {/* Mobile Toggle */}
-        <button
-          className="mobile-menu-btn"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Backdrop & Drawer Menu */}
       {mobileMenuOpen && (
-        <div style={{
-          position: 'absolute',
-          top: '100%',
-          left: 0,
-          right: 0,
-          background: 'var(--bg-secondary)',
-          border: '1px solid var(--glass-border)',
-          borderRadius: 'var(--radius-md)',
-          marginTop: '0.75rem',
-          padding: '1.25rem',
-          boxShadow: 'var(--glass-shadow)',
-          zIndex: 150
-        }}>
-          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <a
-                  href={link.href}
-                  className="nav-link"
-                  style={{ fontSize: '1.1rem', display: 'block' }}
-                  onClick={() => handleNavClick(link.href)}
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+        <div className="mobile-drawer-backdrop" onClick={() => setMobileMenuOpen(false)}>
+          <div className="mobile-drawer-content glass-card" onClick={(e) => e.stopPropagation()}>
+            <div className="mobile-drawer-header">
+              <div className="nav-brand">
+                <div className="nav-logo-icon">RK</div>
+                <span>{info.name}</span>
+              </div>
+              <button
+                className="mobile-drawer-close"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            <ul className="mobile-nav-links">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className={`mobile-nav-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}
+                    onClick={() => handleNavClick(link.href)}
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mobile-drawer-actions">
+              <button
+                className="btn btn-secondary mobile-action-btn"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenMessages();
+                }}
+              >
+                <Database size={16} />
+                <span>DB Messages</span>
+                {messageCount > 0 && (
+                  <span className="msg-badge">
+                    {messageCount}
+                  </span>
+                )}
+              </button>
+
+              <button
+                className="btn btn-primary mobile-action-btn"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenResume();
+                }}
+              >
+                <FileText size={16} />
+                <span>View Resume</span>
+              </button>
+            </div>
+          </div>
         </div>
       )}
-    </header>
+    </>
   );
 };
 

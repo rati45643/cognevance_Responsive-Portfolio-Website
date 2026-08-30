@@ -203,25 +203,7 @@ const AIChatbot = ({ portfolioContent }) => {
 
       {/* Chatbot Glassmorphic Window */}
       {isOpen && (
-        <div
-          style={{
-            position: 'fixed',
-            bottom: '5.5rem',
-            right: '2rem',
-            width: 'min(92vw, 430px)',
-            height: '540px',
-            maxHeight: '80vh',
-            background: 'var(--bg-secondary)',
-            border: '1px solid var(--glass-border-hover)',
-            borderRadius: 'var(--radius-lg)',
-            boxShadow: '0 12px 35px rgba(0, 0, 0, 0.5)',
-            zIndex: 190,
-            display: 'flex',
-            flexDirection: 'column',
-            overflow: 'hidden',
-            backdropFilter: 'blur(16px)'
-          }}
-        >
+        <div className="ai-chatbot-window">
           {/* Chat Header */}
           <div style={{ padding: '0.85rem 1.25rem', background: 'rgba(15, 23, 42, 0.9)', borderBottom: '1px solid var(--glass-border)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
