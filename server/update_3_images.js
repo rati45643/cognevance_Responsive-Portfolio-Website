@@ -40,9 +40,9 @@ setTimeout(async () => {
           description: 'Luxury resort booking and services digital platform. Allows guests to book luxury rooms, order dining/food, and access resort amenities with seamless mobile experience.',
           technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'CSS Modules'],
           image: '/images/mskr_resort.jpg',
-          githubLink: 'https://github.com/ratishkannur',
-          liveLink: 'https://github.com/ratishkannur',
-          credentialLink: 'https://github.com/ratishkannur',
+          githubLink: 'https://github.com/rati45643',
+          liveLink: 'https://github.com/rati45643',
+          credentialLink: 'https://github.com/rati45643',
           highlights: ['Luxury room booking system', 'In-room food ordering API', 'Interactive resort amenities guide']
         });
       }

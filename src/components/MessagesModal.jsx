@@ -18,6 +18,17 @@ const MessagesModal = ({ isOpen, onClose, messages = [], onRefresh }) => {
   const handleAdminLogin = async (e) => {
     e.preventDefault();
     setAuthError('');
+    const viteAdminPass = import.meta.env.VITE_ADMIN_PASSWORD || 'Paarulove1804@';
+    
+    if (adminPassword === viteAdminPass) {
+      setIsAdminAuthenticated(true);
+      setShowPasswordInput(false);
+      setAuthError('');
+      setActionStatus('Unlocked Admin Edit Mode!');
+      setTimeout(() => setActionStatus(''), 3000);
+      return;
+    }
+
     try {
       const res = await fetch('/api/admin/login', {
         method: 'POST',
@@ -32,7 +43,7 @@ const MessagesModal = ({ isOpen, onClose, messages = [], onRefresh }) => {
         setActionStatus('Unlocked Admin Edit Mode!');
         setTimeout(() => setActionStatus(''), 3000);
       } else {
-        setAuthError(data.error || 'Incorrect password');
+        setAuthError(data.error || 'Incorrect Admin Password');
       }
     } catch (err) {
       setAuthError('Connection error verifying password');

@@ -5,8 +5,8 @@ export const personalInfo = {
   email: "ratishkannur@gmail.com",
   phone: "+91 9019542275",
   location: "Bengaluru, Karnataka, India",
-  github: "https://github.com/ratishkannur",
-  linkedin: "https://linkedin.com/in/ratishkannur",
+  github: "https://github.com/rati45643",
+  linkedin: "https://linkedin.com/in/ratish-k",
   portfolio: "https://ratishkannur.dev",
   avatarImage: "/images/ratish.png",
   education: {
@@ -128,7 +128,7 @@ export const projectsData = [
     description: "Real-time executive customer feedback analytics dashboard for MSKR. Aggregates multi-channel user feedback, processes sentiment classification (Positive/Neutral/Negative), and extracts top theme categories.",
     technologies: ["React.js", "Node.js", "Express.js", "AI Analytics", "Vercel", "Dashboard UI"],
     image: "/images/ai_customer_feedback.png",
-    githubLink: "https://github.com/ratishkannur/ai-customer-feedback",
+    githubLink: "https://github.com/rati45643/ai-customer-feedback",
     liveLink: "https://ai-customer-feedback-inky.vercel.app/dashboard",
     credentialLink: "https://ai-customer-feedback-inky.vercel.app/dashboard",
     highlights: [
@@ -145,9 +145,9 @@ export const projectsData = [
     description: "Luxury resort booking and hospitality digital platform. Allows guests to book luxury rooms, order delicious food/dining, and access resort amenities with seamless mobile experience.",
     technologies: ["Android Studio", "Jetpack Compose", "Kotlin", "Android SDK"],
     image: "/images/mskr_resort.jpg",
-    githubLink: "https://github.com/ratishkannur",
-    liveLink: "https://github.com/ratishkannur",
-    credentialLink: "https://github.com/ratishkannur",
+    githubLink: "https://github.com/rati45643",
+    liveLink: "https://github.com/rati45643",
+    credentialLink: "https://github.com/rati45643",
     highlights: [
       "Built luxury room booking and reservation module",
       "Created in-room dining and food ordering API",
@@ -162,9 +162,9 @@ export const projectsData = [
     description: "AI-driven practice platform designed for software engineers. Offers interactive practice zones including Group Discussion simulation, JAM (Just a Minute) spontaneous speaking, and AI Mock Interviews.",
     technologies: ["React.js", "TypeScript", "Node.js", "Gen AI API", "WebSockets"],
     image: "/images/interview_pro.png",
-    githubLink: "https://github.com/ratishkannur/interview-pro-ai",
-    liveLink: "https://github.com/ratishkannur/interview-pro-ai",
-    credentialLink: "https://github.com/ratishkannur/interview-pro-ai",
+    githubLink: "https://github.com/rati45643/interview-pro-ai",
+    liveLink: "https://github.com/rati45643/interview-pro-ai",
+    credentialLink: "https://github.com/rati45643/interview-pro-ai",
     highlights: [
       "Simulated real-world technical interview scenarios with AI voice/text prompts",
       "Evaluated spontaneous speaking skills in JAM and Group Discussion modules",
@@ -179,9 +179,9 @@ export const projectsData = [
     description: "Extractive text summarization system built for the Kannada language using MERN stack frontend and custom NLP algorithms (TextRank, frequency-based, hybrid algorithm).",
     technologies: ["MERN Stack", "TextRank", "Kannada Script", "NLP", "Python", "React.js"],
     image: "/images/kannada_summarizer.png",
-    githubLink: "https://github.com/ratishkannur/kannada-text-summarizer",
-    liveLink: "https://github.com/ratishkannur/kannada-text-summarizer",
-    credentialLink: "https://github.com/ratishkannur/kannada-text-summarizer",
+    githubLink: "https://github.com/rati45643/kannada-text-summarizer",
+    liveLink: "https://github.com/rati45643/kannada-text-summarizer",
+    credentialLink: "https://github.com/rati45643/kannada-text-summarizer",
     highlights: [
       "Implemented TextRank, Advanced, Hybrid, and Simple extractive summarization algorithms for Kannada text",
       "Built clean yellow/red regional Kannada script UI with PDF/Word document import features"
@@ -195,9 +195,9 @@ export const projectsData = [
     description: "Native Android application built with Kotlin and Jetpack Compose that allows users to select source, destination, budget, and travel preferences to generate AI-driven travel itineraries.",
     technologies: ["Kotlin", "Jetpack Compose", "Gen AI API", "Android Studio", "SQLite/Room"],
     image: "/images/mskr_travel_planner.jpg",
-    githubLink: "https://github.com/ratishkannur/ai-travel-planner",
-    liveLink: "https://github.com/ratishkannur/ai-travel-planner",
-    credentialLink: "https://github.com/ratishkannur/ai-travel-planner",
+    githubLink: "https://github.com/rati45643/ai-travel-planner",
+    liveLink: "https://github.com/rati45643/ai-travel-planner",
+    credentialLink: "https://github.com/rati45643/ai-travel-planner",
     highlights: [
       "Generated personalized multi-day trip itineraries based on user constraints",
       "Allowed offline saving, trip editing, and deletion with persistent storage",
@@ -212,9 +212,9 @@ export const projectsData = [
     description: "Regional Karnataka local eatery and heritage marketplace app. Connects users with local food hubs, weekly Santhe market schedules, review walls, and Karnataka specialty tags.",
     technologies: ["Kotlin", "Android Studio", "Firebase", "Jetpack Compose", "REST API"],
     image: "/images/santhe_connect.jpg",
-    githubLink: "https://github.com/ratishkannur/santhe-connect",
-    liveLink: "https://github.com/ratishkannur/santhe-connect",
-    credentialLink: "https://github.com/ratishkannur/santhe-connect",
+    githubLink: "https://github.com/rati45643/santhe-connect",
+    liveLink: "https://github.com/rati45643/santhe-connect",
+    credentialLink: "https://github.com/rati45643/santhe-connect",
     highlights: [
       "Built Local Eatery Map & Heritage Stays discoverer",
       "Created Santhe Calendar for weekly market schedules across Karnataka",
@@ -242,30 +242,42 @@ export const certificatesData = [
     title: "MERN FullStack Certification",
     issuer: "Certified in MERN Full Stack Development",
     details: "Proficiency in MongoDB, Express.js, React.js, and Node.js.",
-    credentialLink: "https://github.com/ratishkannur"
+    credentialLink: "https://drive.google.com/file/d/19ocRInVzX8QRuogHIiNsn8JP3PobRMwq/view?usp=sharing"
   },
   {
     title: "Android App Development Using Gen AI",
     issuer: "Mind Matrix Certification",
     details: "Covered Android development fundamentals, AI integration, app design, testing, and deployment.",
-    credentialLink: "https://github.com/ratishkannur"
+    credentialLink: "https://drive.google.com/file/d/1jCu1pOq3gq4WjFFwtY0-t9dMCAkLFKaV/view?usp=sharing"
   },
   {
     title: "Cyber Suraksha Certification",
     issuer: "TCS (Tata Consultancy Services)",
     details: "Essential cybersecurity practices, threat mitigation, and safe digital usage.",
-    credentialLink: "https://github.com/ratishkannur"
+    credentialLink: "https://drive.google.com/file/d/1DsJb49_9rugmz5DopHcVn0CoWjzZWp-C/view?usp=sharing"
   },
   {
     title: "CSRBOX Micro Internship on Data Analytics",
     issuer: "CSRBOX",
     details: "Hands-on experience in data processing, visual dashboard generation, and insights derivation.",
-    credentialLink: "https://github.com/ratishkannur"
+    credentialLink: "https://drive.google.com/file/d/1zDy3HwxlSzSs0ShYrM4IEy5ZdEaiE4su/view?usp=sharing"
   },
   {
     title: "CDS Data for Public Good",
     issuer: "CDS Certification",
     details: "Focused on leveraging data-driven insights for social impact and public welfare.",
-    credentialLink: "https://github.com/ratishkannur"
+    credentialLink: "https://drive.google.com/file/d/1fe33ghH1WSlX4wD_XyBrmSNaLqSV3EyE/view?usp=sharing"
+  },
+  {
+    title: "AI Tools Workshop",
+    issuer: "Be10x",
+    details: "Focused on exploring and applying AI-powered tools to improve productivity, automation, and problem-solving.",
+    credentialLink: "https://drive.google.com/file/d/1HLJULT-JgmNFKat0nqnW0KdY0PDG1qay/view?usp=sharing"
+  },
+  {
+    title: "Unconventional Computing",
+    issuer: "Astranova Dynamics",
+    details: "Focused on exploring unconventional computing concepts, emerging technologies, and innovative approaches to computational problem-solving.",
+    credentialLink: "https://drive.google.com/file/d/1mNifRSwW3Zu1RiUsRDKzg4XPdnjZRyPU/view?usp=sharing"
   }
 ];
