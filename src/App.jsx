@@ -42,10 +42,37 @@ function App() {
 
   // Fetch live portfolio content from Express API or local storage fallback
   const fetchPortfolioContent = async () => {
+    const mergeWithDefaults = (contentObj) => {
+      if (!contentObj) return {
+        personalInfo: defaultPersonalInfo,
+        skillsData: defaultSkillsData,
+        projectsData: defaultProjectsData,
+        experienceData: defaultExperienceData,
+        certificatesData: defaultCertificatesData
+      };
+
+      const customProjects = contentObj.projectsData || [];
+      const mergedProjects = [...customProjects];
+      
+      defaultProjectsData.forEach((dp) => {
+        const existingIdx = mergedProjects.findIndex(p => p.id === dp.id);
+        if (existingIdx !== -1) {
+          mergedProjects[existingIdx] = dp;
+        } else {
+          mergedProjects.push(dp);
+        }
+      });
+
+      return {
+        ...contentObj,
+        projectsData: mergedProjects
+      };
+    };
+
     try {
       const stored = localStorage.getItem('ratish_portfolio_content');
       if (stored) {
-        setPortfolioContent(JSON.parse(stored));
+        setPortfolioContent(mergeWithDefaults(JSON.parse(stored)));
       }
     } catch (e) {}
 
@@ -54,9 +81,10 @@ function App() {
       if (res.ok) {
         const data = await res.json();
         if (data.content) {
-          setPortfolioContent(data.content);
+          const merged = mergeWithDefaults(data.content);
+          setPortfolioContent(merged);
           try {
-            localStorage.setItem('ratish_portfolio_content', JSON.stringify(data.content));
+            localStorage.setItem('ratish_portfolio_content', JSON.stringify(merged));
           } catch (e) {}
         }
       }

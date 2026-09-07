@@ -220,6 +220,40 @@ export const projectsData = [
       "Created Santhe Calendar for weekly market schedules across Karnataka",
       "Integrated voice notes & local review wall"
     ]
+  },
+  {
+    id: "sales-data-analysis",
+    title: "Sales Data Analysis",
+    category: "Data Analytics",
+    badge: "Python / Data Analytics",
+    description: "Sales data analysis project focused on identifying sales trends, seasonal patterns, and product performance using data cleaning, exploratory analysis, and visualization techniques.",
+    technologies: ["Python", "Pandas", "Matplotlib", "Seaborn", "Power BI"],
+    image: "/images/sales_data_analysis.jpg",
+    githubLink: "https://github.com/rati45643/Sales-Data-Analysis",
+    liveLink: "https://sales-data-analysis-xvjw.onrender.com/",
+    credentialLink: "https://sales-data-analysis-xvjw.onrender.com/",
+    highlights: [
+      "Analyzed sales trends and seasonal patterns using Python and Pandas",
+      "Evaluated product and category performance to identify key business insights",
+      "Created an interactive dashboard to visualize sales KPIs, trends, and performance"
+    ]
+  },
+  {
+    id: "customer-segmentation",
+    title: "Customer Segmentation",
+    category: "Machine Learning",
+    badge: "Python / K-Means",
+    description: "Customer segmentation project that analyzes purchasing behavior and groups customers into meaningful segments using K-Means clustering and data analysis techniques.",
+    technologies: ["Python", "Pandas", "Scikit-Learn", "Matplotlib", "K-Means", "Streamlit"],
+    image: "/images/customer_segmentation.jpg",
+    githubLink: "https://github.com/rati45643/Customer-Segmentation",
+    liveLink: "https://github.com/rati45643/Customer-Segmentation",
+    credentialLink: "https://github.com/rati45643/Customer-Segmentation",
+    highlights: [
+      "Cleaned and prepared customer data using Python and Pandas",
+      "Applied K-Means clustering with Scikit-Learn to identify customer segments",
+      "Built an interactive dashboard to visualize clusters, customer behavior, and business insights"
+    ]
   }
 ];
 

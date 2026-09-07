@@ -60,6 +60,25 @@ app.get('/api/content', async (req, res) => {
   try {
     const savedContent = await getPortfolioContent();
     if (savedContent) {
+      const savedProjects = savedContent.projectsData || [];
+      let updated = false;
+
+      defaultProjectsData.forEach((dp) => {
+        const existingIdx = savedProjects.findIndex(p => p.id === dp.id);
+        if (existingIdx !== -1) {
+          savedProjects[existingIdx] = dp;
+          updated = true;
+        } else {
+          savedProjects.push(dp);
+          updated = true;
+        }
+      });
+
+      savedContent.projectsData = savedProjects;
+      if (updated) {
+        await savePortfolioContent(savedContent);
+      }
+
       return res.json({ success: true, isCustomized: true, content: savedContent });
     }
     
