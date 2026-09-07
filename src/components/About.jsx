@@ -25,7 +25,7 @@ const About = ({ personalInfo }) => {
             </h3>
             
             <p className="about-text">
-              I am pursuing my Bachelor of Engineering (B.E.) in Information Science and Engineering at <strong>{info.education?.institution}</strong>. Throughout my academic journey, I have maintained an outstanding academic record with a <strong>CGPA of {info.education?.cgpa}</strong>.
+              I am a BE Qualified Information Science and Engineering Graduate from <strong>{info.education?.institution}</strong>, between the years <strong>{info.education?.period}</strong> with a <strong>CGPA of {info.education?.cgpa}</strong>.
             </p>
 
             <p className="about-text">
